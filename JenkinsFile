@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+    stages {
+        stage('EvenOdd') {
+            steps {
+                script {
+                    def number = 7
+                    echo number % 2 == 0 ? "${number} is Even" : "${number} is Odd"
+                }
+            }
+        }
+    }
+}
